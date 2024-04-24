@@ -1,0 +1,41 @@
+﻿<Window x:Class="AeternoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AeternoApp"
+        mc:Ignorable="d"
+        Title="Aeterno App" Height="600" Width="1000">
+    <Grid Background="#242424">
+        <Border MinWidth="400" Margin="15" Background="#27b34a" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="#121212" ShadowDepth="0" />
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Welcome to Aeterno App!" FontSize="25" FontWeight="SemiBold" TextAlignment="Center" FontStyle="Italic" Margin="0 0 0 20" />
+
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Registration" Background="#FF121212" BorderBrush="Transparent" Foreground="White" />
+                    <Button HorizontalAlignment="Left" Content="Login" Background="Transparent" BorderBrush="#121212" Foreground="#121212" Margin="72,0,0,0" Click="Button_Window_Login_Click" />
+                </Grid>
+                <Grid>
+                    <TextBlock Text="Login" Margin="5,0,245,0" />
+                    <TextBlock Text="Password" Margin="245,0,5,0" HorizontalAlignment="Right" />
+                </Grid>
+                <Grid>
+                    <TextBox ToolTip="Write login" x:Name="textBoxLogin" Background="Transparent" Foreground="White" SelectionBrush="#FF27B34A" BorderBrush="#FF121212" Margin="0,0,250,0" />
+                    <PasswordBox ToolTip="Write password" x:Name="passwordBoxPassword" Background="Transparent" Foreground="White" SelectionBrush="#FF27B34A" BorderBrush="#FF121212" HorizontalAlignment="Left" Margin="250,0,0,0" Width="240" />
+                </Grid>
+                <Grid Margin="0 10 0 0">
+                    <TextBlock Text="Email" Margin="5,0,245,0" />
+                    <TextBlock Text="Repeat psassword" Margin="245,0,5,0" HorizontalAlignment="Right" />
+                </Grid>
+                <Grid>
+                    <TextBox ToolTip="Write email" x:Name="textBoxEmail" Background="Transparent" Foreground="White" SelectionBrush="#FF27B34A" BorderBrush="#FF121212" Margin="0,0,250,0" />
+                    <PasswordBox ToolTip="Repeat Password" x:Name="passwordBoxRepeatPassword" Background="Transparent" Foreground="White" SelectionBrush="#FF27B34A" BorderBrush="#FF121212" HorizontalAlignment="Left" Margin="250,0,0,0" Width="240" />
+                </Grid>
+                <Button Content="Register" Margin="0 10 0 0" HorizontalAlignment="Center" Width="100" Background="#FF121212" BorderBrush="Transparent" Foreground="White" Click="Button_Register_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
