@@ -71,13 +71,16 @@ namespace AeternoApp
                 db.Users.Add(user);
                 db.SaveChanges();
 
-                LoginWindow loginWindow = new LoginWindow();
-                loginWindow.Show();
-                Hide();
+                OpenLoginWindow();
             }
         }
 
         private void Button_Window_Login_Click(object sender, RoutedEventArgs e)
+        {
+            OpenLoginWindow();
+        }
+
+       void OpenLoginWindow()
         {
             LoginWindow loginWindow = new LoginWindow();
             loginWindow.Show();

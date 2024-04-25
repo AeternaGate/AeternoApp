@@ -6,8 +6,19 @@
         xmlns:local="clr-namespace:AeternoApp"
         mc:Ignorable="d"
         Title="Aeterno App" Height="600" Width="1000">
+    <!--<Window.Triggers>  (Animation sample)
+        <EventTrigger RoutedEvent="Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard Storyboard.TargetName="mainBorder" Storyboard.TargetProperty="MaxWidth">
+                        <DoubleAnimation From="550" To="540" AutoReverse="True" RepeatBehavior="1x" Duration="0:0:0.2" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>-->
     <Grid Background="#242424">
-        <Border MinWidth="400" Margin="15" Background="#27b34a" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+        <Border x:Name="mainBorder" MinWidth="400" Margin="15" Background="#27b34a" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="#121212" ShadowDepth="0" />
             </Border.Effect>
